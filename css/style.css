@@ -8,62 +8,71 @@ body {
 }
 
 .header__logo {
-  padding: 10px 0;
-}
-.header__logo img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-.header__localisation {
-  box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(231, 231, 231);
-  font-weight: 500;
-  align-items: center;
   padding: 15px 0;
 }
-.header__localisation i, .header__localisation p {
-  margin: 0;
+.header__logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 }
-.header__localisation i {
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
+  padding: 15px 0;
+  background-color: rgb(231, 231, 231);
+  font-weight: 500;
+}
+.localisation__icone {
+  margin: 0;
   padding-right: 20px;
+}
+.localisation__ville {
+  margin: 0;
 }
 
 .reservation {
-  background-color: rgb(240, 242, 242);
   display: flex;
   flex-direction: column;
-  padding: 30px 0;
   align-items: center;
+  background-color: rgb(247, 247, 247);
+  padding: 30px;
 }
 .reservation__titre {
   margin: 0;
   font-weight: 750;
+  text-align: center;
+}
+.reservation__description {
+  text-align: center;
 }
 .reservation__bouton {
+  font-weight: 500;
   border-radius: 20px;
   border: 0px transparent;
-  padding: 10px;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  padding: 13px 17px;
   color: white;
-  background: linear-gradient(rgb(209, 106, 219), 95%, blue);
+  background: linear-gradient(#f392d8, #9356DC);
 }
 
 .fonctionnement {
-  padding: 30px 15px;
+  padding: 30px;
 }
 .fonctionnement ol {
   padding: 0;
 }
-.fonctionnement li {
+.fonctionnement__etape {
   border-radius: 20px;
   border: 0px transparent;
-  box-shadow: 0px 6px 7px 0px rgba(3, 3, 7, 0.3);
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   font-weight: 600;
   margin-bottom: 20px;
-  padding: 20px;
-  background-color: rgb(240, 242, 242);
+  padding: 25px;
+  background-color: rgb(247, 247, 247);
 }
 .fonctionnement__etape__icone {
   color: grey;
@@ -74,13 +83,13 @@ body {
 }
 
 .restaurant {
-  background-color: rgb(240, 242, 242);
-  padding: 30px 15px;
+  background-color: rgb(247, 247, 247);
+  padding: 30px;
 }
 .restaurant__carte {
   border-radius: 20px;
   border: 0px transparent;
-  box-shadow: 0px 6px 7px 0px rgba(3, 3, 7, 0.3);
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   height: 300px;
   margin-bottom: 50px;
   background-color: white;
@@ -97,7 +106,7 @@ body {
 }
 .restaurant__carte__container__image--nouveau {
   border: #99E2D0 1px solid;
-  border-radius: 1px;
+  border-radius: 2px;
   position: absolute;
   right: 5%;
   bottom: 70%;
@@ -108,7 +117,8 @@ body {
 }
 .restaurant__carte__bas {
   display: flex;
-  padding: 25px;
+  padding: 20px;
+  align-items: baseline;
 }
 .restaurant__carte__bas__icone {
   margin-left: auto;
@@ -116,15 +126,19 @@ body {
 .restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
   margin: 0;
 }
+.restaurant__carte__bas__texte__quartier {
+  font-size: 22px;
+  font-weight: 300;
+}
 
 .footer {
-  padding: 30px 15px;
+  padding: 30px;
   background-color: rgb(44, 43, 43);
-  color: white;
   color: white;
 }
 .footer__logo {
   filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
+  width: 100px;
 }
 .footer__list {
   list-style: none;
@@ -132,6 +146,9 @@ body {
 }
 .footer__list__icone {
   padding-right: 10px;
+}
+.footer__list li {
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

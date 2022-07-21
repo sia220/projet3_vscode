@@ -1,8 +1,10 @@
 $color-primary : #9356DC;
 $color-secondary : #FF79DA;
 $color-teritiary : #99E2D0;
+$color-quaternary : rgb(247,247,247);
+$padding-page : 30px;
 @mixin ombre {
-    box-shadow: 0px 6px 7px 0px rgba(3, 3, 7, 0.3);
+    box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
 }
 @mixin bordure {
     border-radius: 20px;
@@ -17,70 +19,78 @@ body {
 }
 .header{
     &__logo {
-        padding: 10px 0;
-    img {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    }
-    &__localisation {
-        box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
-        display: flex;
-        justify-content: center;
-        background-color: rgb(231, 231, 231);
-        font-weight: 500;
-        align-items: center;
         padding: 15px 0;
-        i, p {
-            margin: 0;  
-        }   
-        i {
-            padding-right: 20px;
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
         }
-        }
-    }  
+    }
+} 
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
+    padding: 15px 0;
+    background-color: rgb(231, 231, 231);
+    font-weight: 500;
+    &__icone {
+        margin: 0;  
+        padding-right: 20px;
+    }   
+    &__ville {
+       margin: 0;   
+    }
+} 
 .reservation {
-    background-color: rgb(240, 242, 242);
     display: flex;
     flex-direction: column;
-    padding: 30px 0;
     align-items: center;
+    background-color: $color-quaternary;
+    padding: $padding-page;
     &__titre {
         margin: 0 ;
         font-weight: 750;
+        text-align: center;
+    } 
+    &__description {
+        text-align: center;
     }
     &__bouton {
+        font-weight: 500;
         @include bordure;
-        padding: 10px;
+        @include ombre ;
+        padding: 13px 17px;
         color:white;
-        background: linear-gradient(rgb(209, 106, 219), 95%, blue);
+        background: linear-gradient(#f392d8, $color-primary)
     }
 } 
 .fonctionnement {
-    padding: 30px 15px;
+    padding:$padding-page;
     ol {
         padding: 0;   
     }
-    li {
+    &__etape {
         @include bordure;
         @include ombre ;
         font-weight: 600;
         margin-bottom: 20px;
-        padding: 20px;
-        background-color: rgb(240, 242, 242);
-    }
-    &__etape__icone {
-        color: grey;
-        padding-right: 15px;   
-        &--violet {
-            color: $color-primary;
-    }
+        padding: 25px;
+        background-color: $color-quaternary;
+        &__icone {
+            color: grey;
+            padding-right: 15px;   
+            &--violet {
+                color: $color-primary;
+            }
+        }
     }
 }
 .restaurant {
-    background-color: rgb(240, 242, 242);
-    padding: 30px 15px;
+    background-color:$color-quaternary;
+    padding: $padding-page;
     &__carte {
         @include bordure;
         @include ombre ;
@@ -97,7 +107,7 @@ body {
                 border-radius: 15px  15px 0 0;
                 &--nouveau {
                     border: $color-teritiary 1px solid;
-                    border-radius: 1px;
+                    border-radius: 2px;
                     position: absolute;
                     right: 5%;
                     bottom: 70%;
@@ -110,23 +120,29 @@ body {
         }
         &__bas {
             display: flex;
-            padding: 25px;
+            padding: 20px;
+            align-items: baseline;
             &__icone {
             margin-left: auto;
             }
             &__texte__titre, &__texte__quartier {
             margin: 0;
             }
+            &__texte__quartier {
+                font-size:22px ;
+                font-weight: 300;
+            }
+
         }
     }
 }
 .footer {
-    padding: 30px 15px;
+    padding: $padding-page;
     background-color: rgb(44, 43, 43);
-    color: white;
     color: #FFFF;
     &__logo {
         filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
+        width: 100px;
     }
     &__list {
         list-style: none;
@@ -134,8 +150,9 @@ body {
         &__icone {
             padding-right: 10px;
         }
-    }
-    
-    
+        li {
+            padding-bottom: 5px;
+        }
+    }   
 }
 

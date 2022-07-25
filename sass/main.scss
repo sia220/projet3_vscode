@@ -136,9 +136,12 @@ body {
         &__bas {
             display: flex;
             padding: 20px;
-            align-items: baseline;
             &__icone {
-            margin-left: auto;
+                margin-left: auto;
+                padding: 20px;
+                &:hover {
+                    font-weight: 900;
+                }
             }
             &__texte__titre, &__texte__quartier {
             margin: 0;

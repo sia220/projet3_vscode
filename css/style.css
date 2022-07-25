@@ -136,10 +136,13 @@ body a {
 .restaurant__carte__bas {
   display: flex;
   padding: 20px;
-  align-items: baseline;
 }
 .restaurant__carte__bas__icone {
   margin-left: auto;
+  padding: 20px;
+}
+.restaurant__carte__bas__icone:hover {
+  font-weight: 900;
 }
 .restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
   margin: 0;

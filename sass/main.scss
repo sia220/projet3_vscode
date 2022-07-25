@@ -16,17 +16,19 @@ $padding-page : 30px;
 }
 body {
     margin: 0;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 .header{
-    &__logo {
         padding: 15px 0;
-        img {
+        &__logo {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 200px;
         }
-    }
 } 
 .localisation {
     display: flex;
@@ -69,22 +71,35 @@ body {
 } 
 .fonctionnement {
     padding:$padding-page;
-    ol {
+    ul {
         padding: 0;   
+    }
+    .fonctionnement__etape:hover .fonctionnement__etape__icone {
+        color: $color-primary;
     }
     &__etape {
         @include bordure;
         @include ombre ;
         font-weight: 600;
         margin-bottom: 20px;
-        padding: 25px;
+        padding: 25px 0;
         background-color: $color-quaternary;
+        list-style: none;
+        &:hover {
+            background-color:#f5eef7;
+        }
+        &__chiffre{
+            @include bordure;
+            position: relative;
+            right: 15px;
+            padding: 5px 10px;
+            background-color: $color-primary;
+            color: white;
+            font-weight: 500;
+        }
         &__icone {
             color: grey;
             padding-right: 15px;   
-            &--violet {
-                color: $color-primary;
-            }
         }
     }
 }

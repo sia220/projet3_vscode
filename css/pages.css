@@ -1,3 +1,127 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
 
+body {
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header :first-of-type {
+  width: 33%;
+}
+.header__icone {
+  padding-left: 20px;
+}
+
+.photo_restaurant {
+  width: 100%;
+}
+
+.carte {
+  position: relative;
+  bottom: 94px;
+  border-radius: 40px 40px 0px 0;
+  background-color: rgb(247, 247, 247);
+  border: 0px transparent;
+  padding: 30px;
+  margin-bottom: -94px;
+}
+.carte__entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 20px;
+}
+.carte__entete__titre {
+  font-family: Shrikhand, sans-serif;
+  font-weight: 500;
+}
+.carte__section {
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.carte__section__titre {
+  font-weight: 300;
+}
+.carte__section__titre--soulignement {
+  border-bottom: 3.5px solid #99E2D0;
+}
+.carte__section__ligne {
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  border-radius: 20px;
+  border: 0px transparent;
+  padding: 15px;
+  background: white;
+  margin-bottom: 14px;
+}
+.carte__section__ligne__titre {
+  margin: 0;
+}
+.carte__section__ligne__bas {
+  display: flex;
+  justify-content: space-between;
+}
+.carte__section__ligne__bas__description {
+  margin: 0;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 12px;
+}
+.carte__section__ligne__bas__prix {
+  margin: 0;
+  font-weight: 500;
+}
+.carte__commander {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.carte__commander__bouton {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  border-radius: 20px;
+  border: 0px transparent;
+  padding: 10px 30px;
+  color: white;
+  background: linear-gradient(#f392d8, #9356DC);
+  font-weight: 400;
+}
+
+.footer {
+  padding: 30px;
+  background-color: rgb(52, 52, 52);
+  color: white;
+}
+.footer__logo {
+  filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
+  width: 100px;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+.footer__list__icone {
+  padding-right: 10px;
+}
+.footer__list li {
+  padding-bottom: 5px;
+}
 
 /*# sourceMappingURL=pages.css.map */

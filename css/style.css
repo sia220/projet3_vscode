@@ -5,6 +5,7 @@
 
 body {
   margin: 0;
+  cursor: pointer;
 }
 body a {
   text-decoration: none;
@@ -143,6 +144,7 @@ body a {
 }
 .restaurant__carte__bas__icone:hover {
   font-weight: 900;
+  color: #f392d8;
 }
 .restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
   margin: 0;
@@ -154,7 +156,7 @@ body a {
 
 .footer {
   padding: 30px;
-  background-color: rgb(44, 43, 43);
+  background-color: rgb(52, 52, 52);
   color: white;
 }
 .footer__logo {

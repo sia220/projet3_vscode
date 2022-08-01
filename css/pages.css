@@ -26,6 +26,8 @@ body a {
 
 .photo_restaurant {
   width: 100%;
+  object-fit: cover;
+  height: 300px;
 }
 
 .carte {

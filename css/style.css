@@ -5,9 +5,9 @@
 
 body {
   margin: 0;
-  cursor: pointer;
 }
 body a {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -62,6 +62,10 @@ body a {
   padding: 13px 17px;
   color: white;
   background: linear-gradient(#f392d8, #9356DC);
+}
+.reservation__bouton:hover {
+  background: linear-gradient(#ff6acd, #9356DC);
+  box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);
 }
 
 .fonctionnement {
@@ -144,7 +148,10 @@ body a {
 }
 .restaurant__carte__bas__icone:hover {
   font-weight: 900;
-  color: #f392d8;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
   margin: 0;
@@ -168,6 +175,8 @@ body a {
   padding: 0;
 }
 .footer__list__icone {
+  width: 20px;
+  height: 16px;
   padding-right: 10px;
 }
 .footer__list li {

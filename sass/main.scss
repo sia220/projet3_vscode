@@ -16,8 +16,8 @@ $padding-page : 30px;
 }
 body {
     margin: 0;
-    cursor: pointer;
     a {
+        cursor: pointer;
         text-decoration: none;
         color: inherit;
     }
@@ -67,7 +67,11 @@ body {
         @include ombre ;
         padding: 13px 17px;
         color:white;
-        background: linear-gradient(#f392d8, $color-primary)
+        background: linear-gradient(#f392d8, $color-primary);
+        &:hover {
+            background: linear-gradient(#ff6acd, $color-primary);
+            box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);
+        }
     }
 } 
 .fonctionnement {
@@ -142,7 +146,10 @@ body {
                 padding: 20px;
                 &:hover {
                     font-weight: 900;
-                    color: #f392d8;
+                    background: linear-gradient(#f392d8, $color-primary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
                 }
             }
             &__texte__titre, &__texte__quartier {
@@ -168,6 +175,8 @@ body {
         list-style: none;
         padding: 0;
         &__icone {
+            width: 20px;
+            height: 16px;
             padding-right: 10px;
         }
         li {

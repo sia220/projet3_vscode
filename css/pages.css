@@ -1,3 +1,36 @@
+@keyframes remplissage {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+@keyframes volet {
+  0% {
+    transform: translateX(99px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 * {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
@@ -49,6 +82,17 @@ body a {
   font-family: Shrikhand, sans-serif;
   font-weight: 500;
 }
+.carte__entete__icone {
+  padding: 20px;
+}
+.carte__entete__icone:hover {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 1500ms;
+}
 .carte__section {
   justify-content: space-between;
   margin-bottom: 30px;
@@ -63,9 +107,47 @@ body a {
   box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   border-radius: 20px;
   border: 0px transparent;
-  padding: 15px;
+  overflow: hidden;
   background: white;
   margin-bottom: 14px;
+  opacity: 1;
+  display: flex;
+}
+.carte__section__ligne__entrees {
+  animation: apparition 2000ms 0s both;
+}
+.carte__section__ligne__plats {
+  animation: apparition 2000ms 1s both;
+}
+.carte__section__ligne__desserts {
+  animation: apparition 2000ms 2s both;
+}
+.carte__section__ligne .bar {
+  padding: 15px;
+  width: 110%;
+}
+.carte__section__ligne:hover .carte__section__ligne__bas__prix {
+  transform: translateX(-30px);
+  transition-duration: 500ms;
+}
+.carte__section__ligne:hover .progress__bar {
+  animation: volet both 500ms;
+}
+.carte__section__ligne:hover .progress__bar i {
+  animation: rotation 500ms 150ms both;
+}
+.carte__section__ligne .progress__bar {
+  transform: translateX(80px);
+  padding: 15px;
+  width: 80px;
+  background: #99E2D0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carte__section__ligne .progress__bar i {
+  color: white;
 }
 .carte__section__ligne__titre {
   margin: 0;
@@ -85,6 +167,7 @@ body a {
 .carte__section__ligne__bas__prix {
   margin: 0;
   font-weight: 500;
+  transform: translateX(30px);
 }
 .carte__commander {
   display: block;

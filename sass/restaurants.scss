@@ -9,6 +9,39 @@ $padding-page : 30px;
     border-radius: 20px;
     border: 0px transparent;
 }
+@keyframes remplissage {
+    0% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes apparition {
+    to {
+     opacity: 1;
+    }
+    from {
+       opacity: 0;
+        transform: translateY(20px);
+    }
+}
+@keyframes volet{
+    0% {
+        transform: translateX(99px);
+    }
+    100% {
+        transform: translateX(0);
+        }
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 * {
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
@@ -55,6 +88,17 @@ body {
             font-family: Shrikhand, sans-serif;
             font-weight: 500;
         }
+        &__icone {
+           padding: 20px; 
+            &:hover {
+                font-weight: 900;
+                background: linear-gradient(#f392d8, $color-primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                animation: remplissage 1500ms;
+            }
+        }
     }
     &__section {
         justify-content: space-between;
@@ -68,9 +112,47 @@ body {
         &__ligne {
             @include ombre;
             @include bordure;
-            padding: 15px;
+            overflow: hidden;
             background: white;
             margin-bottom: 14px;
+            opacity: 1;
+            display: flex;
+            &__entrees {
+                animation: apparition 2000ms 0s both ;
+            }
+            &__plats{
+                animation: apparition 2000ms 1s both;
+            }
+            &__desserts{
+              animation: apparition 2000ms 2s both;  
+            }
+            .bar {
+                padding: 15px;
+                width: 110%;
+            }
+            &:hover  .carte__section__ligne__bas__prix{
+                transform: translateX(-30px);
+                transition-duration: 500ms;
+            }
+            &:hover .progress__bar {
+                animation: volet  both 500ms;
+            }
+            &:hover .progress__bar i {
+                animation: rotation 500ms  150ms both;  
+            }
+            .progress__bar{
+                transform: translateX(80px);
+                padding: 15px;
+                width: 80px;
+                background: #99E2D0;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    color: white;              
+                }
+            }
             &__titre {
                 margin: 0;
             }
@@ -88,10 +170,9 @@ body {
                 &__prix {
                     margin: 0;
                     font-weight: 500;
+                    transform: translateX(30px);
                 }
-  
             }
-
         }
     }
     &__commander {

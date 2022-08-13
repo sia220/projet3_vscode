@@ -1,3 +1,11 @@
+@keyframes remplissage {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
@@ -152,6 +160,7 @@ body a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  animation: remplissage 1500ms;
 }
 .restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
   margin: 0;

@@ -94,7 +94,6 @@ body a {
   animation: remplissage 1500ms;
 }
 .carte__section {
-  justify-content: space-between;
   margin-bottom: 30px;
 }
 .carte__section__titre {
@@ -122,52 +121,57 @@ body a {
 .carte__section__ligne__desserts {
   animation: apparition 2000ms 2s both;
 }
-.carte__section__ligne .bar {
+.carte__section__ligne__sans_volet {
   padding: 15px;
-  width: 110%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.carte__section__ligne:hover .carte__section__ligne__bas__prix {
-  transform: translateX(-30px);
-  transition-duration: 500ms;
+.carte__section__ligne__sans_volet__titre {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.carte__section__ligne:hover .progress__bar {
-  animation: volet both 500ms;
+.carte__section__ligne__sans_volet__bas {
+  display: flex;
+  justify-content: space-between;
 }
-.carte__section__ligne:hover .progress__bar i {
-  animation: rotation 500ms 150ms both;
+.carte__section__ligne__sans_volet__bas__description {
+  margin: 0;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.carte__section__ligne .progress__bar {
+.carte__section__ligne__sans_volet__bas__prix {
+  margin: 0;
+  padding-left: 5px;
+  font-weight: 500;
+}
+.carte__section__ligne__avec_volet {
   transform: translateX(80px);
   padding: 15px;
-  width: 80px;
+  width: 0;
   background: #99E2D0;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.carte__section__ligne .progress__bar i {
+.carte__section__ligne__avec_volet i {
   color: white;
 }
-.carte__section__ligne__titre {
-  margin: 0;
+.carte__section__ligne:hover .carte__section__ligne__sans_volet__bas__prix {
+  transition-duration: 500ms;
 }
-.carte__section__ligne__bas {
-  display: flex;
-  justify-content: space-between;
+.carte__section__ligne:hover .carte__section__ligne__avec_volet {
+  animation: volet both 500ms;
+  width: 80px;
 }
-.carte__section__ligne__bas__description {
-  margin: 0;
-  font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 12px;
-}
-.carte__section__ligne__bas__prix {
-  margin: 0;
-  font-weight: 500;
-  transform: translateX(30px);
+.carte__section__ligne:hover .carte__section__ligne__avec_volet i {
+  animation: rotation 500ms 150ms both;
 }
 .carte__commander {
   display: block;

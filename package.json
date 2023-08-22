@@ -1,11 +1,19 @@
 {
   "name": "projet3_vscode",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css  ./sass/restaurants.scss:./css/pages.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sia220/projet3_vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sia220/projet3_vscode/issues"
+  },
+  "homepage": "https://github.com/sia220/projet3_vscode#readme",
+  "description": ""
 }

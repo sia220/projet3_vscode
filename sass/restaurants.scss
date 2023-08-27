@@ -123,6 +123,17 @@ body {
         height: 300px;
 
 }
+#bouton {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
 .carte {
     position: relative;
     bottom: 65px;
@@ -141,15 +152,7 @@ body {
             font-weight: 500;
         }
         &__icone {
-           padding: 20px; 
-            &:hover {
-                font-weight: 900;
-                background: linear-gradient(#f392d8, $color-primary);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                animation: remplissage 1500ms;
-            }
+                padding: 20px;
         }
     }
     &__section {
@@ -224,7 +227,7 @@ body {
                 transition-duration: 500ms;
             }
             &:hover .carte__section__ligne__avec_volet {
-                animation: volet both 500ms;
+               animation: volet both 500ms;
                 width: 80px;
             }
             &:hover .carte__section__ligne__avec_volet i {

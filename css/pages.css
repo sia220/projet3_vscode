@@ -88,7 +88,7 @@ body a {
   animation-delay: 180ms;
 }
 .load__bar--1-inv {
-  animation-delay: 1235ms;
+  animation-delay: 1100ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -99,7 +99,7 @@ body a {
   animation-delay: 360ms;
 }
 .load__bar--2-inv {
-  animation-delay: 700ms;
+  animation-delay: 805ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -110,7 +110,7 @@ body a {
   animation-delay: 540ms;
 }
 .load__bar--3-inv {
-  animation-delay: 1035ms;
+  animation-delay: 660ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -121,7 +121,7 @@ body a {
   animation-delay: 720ms;
 }
 .load__bar--4-inv {
-  animation-delay: 1355ms;
+  animation-delay: 1415ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -132,7 +132,7 @@ body a {
   animation-delay: 900ms;
 }
 .load__bar--5-inv {
-  animation-delay: 1330ms;
+  animation-delay: 1630ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -159,6 +159,18 @@ body a {
   height: 300px;
 }
 
+#bouton {
+  display: none;
+}
+#bouton:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
 .carte {
   position: relative;
   bottom: 65px;
@@ -180,14 +192,6 @@ body a {
 }
 .carte__entete__icone {
   padding: 20px;
-}
-.carte__entete__icone:hover {
-  font-weight: 900;
-  background: linear-gradient(#f392d8, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: remplissage 1500ms;
 }
 .carte__section {
   margin-bottom: 30px;

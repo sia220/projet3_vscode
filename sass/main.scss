@@ -31,12 +31,12 @@ body {
     }
 }
 .header{
-        padding: 15px 0;
-        &__logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 200px;
+    padding: 15px 0;
+    &__logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
         }
 } 
 .localisation {
@@ -116,6 +116,50 @@ body {
         }
     }
 }
+#bouton {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
+#boutonn {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
+#boutonnn {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
+#boutonnnn {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
 .restaurant {
     background-color:$color-quaternary;
     padding: $padding-page;
@@ -148,17 +192,13 @@ body {
         }
         &__bas {
             display: flex;
+            align-items: center;
             padding: 20px;
-            &__icone {
+            &__label {
                 margin-left: auto;
-                padding: 20px; 
-                &:hover {
-                    font-weight: 900;
-                    background: linear-gradient(#f392d8, $color-primary);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    animation: remplissage 1500ms;
+                padding-left: 10px;
+                &__icone {
+                    padding: 14px 0px;
                 }
             }
             &__texte__titre, &__texte__quartier {

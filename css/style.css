@@ -113,6 +113,54 @@ body a {
   padding-right: 15px;
 }
 
+#bouton {
+  display: none;
+}
+#bouton:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+#boutonn {
+  display: none;
+}
+#boutonn:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+#boutonnn {
+  display: none;
+}
+#boutonnn:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+#boutonnnn {
+  display: none;
+}
+#boutonnnn:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
 .restaurant {
   background-color: rgb(247, 247, 247);
   padding: 30px;
@@ -148,19 +196,15 @@ body a {
 }
 .restaurant__carte__bas {
   display: flex;
+  align-items: center;
   padding: 20px;
 }
-.restaurant__carte__bas__icone {
+.restaurant__carte__bas__label {
   margin-left: auto;
-  padding: 20px;
+  padding-left: 10px;
 }
-.restaurant__carte__bas__icone:hover {
-  font-weight: 900;
-  background: linear-gradient(#f392d8, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: remplissage 1500ms;
+.restaurant__carte__bas__label__icone {
+  padding: 14px 0px;
 }
 .restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
   margin: 0;

@@ -194,6 +194,21 @@ body {
             display: flex;
             align-items: center;
             padding: 20px;
+            &__texte {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &__titre, &__quartier {
+                    margin: 0;
+                   white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    }
+                &__quartier {
+                    font-size:22px ;
+                    font-weight: 300;
+                }
+            }
             &__label {
                 margin-left: auto;
                 padding-left: 10px;
@@ -201,13 +216,7 @@ body {
                     padding: 14px 0px;
                 }
             }
-            &__texte__titre, &__texte__quartier {
-            margin: 0;
-            }
-            &__texte__quartier {
-                font-size:22px ;
-                font-weight: 300;
-            }
+          
 
         }
     }

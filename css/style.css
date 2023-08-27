@@ -199,19 +199,27 @@ body a {
   align-items: center;
   padding: 20px;
 }
+.restaurant__carte__bas__texte {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurant__carte__bas__texte__quartier {
+  font-size: 22px;
+  font-weight: 300;
+}
 .restaurant__carte__bas__label {
   margin-left: auto;
   padding-left: 10px;
 }
 .restaurant__carte__bas__label__icone {
   padding: 14px 0px;
-}
-.restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
-  margin: 0;
-}
-.restaurant__carte__bas__texte__quartier {
-  font-size: 22px;
-  font-weight: 300;
 }
 
 .footer {

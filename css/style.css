@@ -6,6 +6,14 @@
     opacity: 1;
   }
 }
+@keyframes barres {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 * {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
@@ -18,6 +26,94 @@ body a {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+}
+
+.container {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 3s, opacity 6s;
+}
+
+.load {
+  display: flex;
+  width: 50%;
+  height: 30vh;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #99E2D0;
+  height: 100%;
+  width: 3vh;
+  animation-name: barres;
+  animation-duration: 900ms;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.load__bar--1 {
+  animation-delay: 180ms;
+}
+.load__bar--1-inv {
+  animation-delay: 740ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--1-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--2 {
+  animation-delay: 360ms;
+}
+.load__bar--2-inv {
+  animation-delay: 1165ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--2-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--3 {
+  animation-delay: 540ms;
+}
+.load__bar--3-inv {
+  animation-delay: 1170ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--3-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--4 {
+  animation-delay: 720ms;
+}
+.load__bar--4-inv {
+  animation-delay: 2135ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--4-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--5 {
+  animation-delay: 900ms;
+}
+.load__bar--5-inv {
+  animation-delay: 1435ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--5-inv:hover {
+  animation-play-state: paused;
 }
 
 .header {

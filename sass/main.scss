@@ -18,6 +18,14 @@ $padding-page : 30px;
         opacity: 1;
     }
 }
+@keyframes barres {
+    0% {
+     transform: scaleY(0.5);
+    }
+    100% {
+     transform: scaleY(1);
+    }
+}
 * {
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
@@ -30,6 +38,56 @@ body {
         color: inherit;
     }
 }
+
+
+
+
+.container {
+    position: fixed; // le loader sera toujours visible sur la fenetre même si on scrolle
+    z-index: 999; // le loader couvrira les élements qui le suivent
+    width: 100%; // le loader prendra toute la largeur de la fenetre
+    height: 100%; // le loader prendra toute la hauteur de la fenetre
+    background-color: white; // couleur d'arrière-plan du loader
+    display: flex; // pour pouvoir centrer le loader
+    flex-direction: column; // pour que les blocs de l'animation se superposent en colonne
+    align-items: center; // centre le loader en horizontale
+    justify-content: center; // centre le loader en verticale
+    visibility: hidden; // fait disparaitre l'animation
+    opacity: 0; // fait disparaitre la couleur d'arriere-plan
+    transition: visibility 3s, opacity 6s;
+ }
+ .load {
+    display: flex;
+    width: 50%;
+    height: 30vh;
+    justify-content: space-evenly;
+    &__bar {
+        background-color: $color-teritiary;
+        height: 100%;
+        width:3vh;
+        animation-name: barres;
+        animation-duration: 900ms;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                animation-delay: $i * 180ms;
+            }
+            &--#{$i}-inv {
+                animation-delay: $i * 200ms + random(100)*15ms;
+                animation-direction: alternate-reverse;
+                background-color: $color-secondary;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        } 
+     }   
+}
+
+
 .header{
     padding: 15px 0;
     &__logo {

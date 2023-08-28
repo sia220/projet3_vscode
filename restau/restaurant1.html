@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La note enchantée</title>
-    <link rel="stylesheet" href="normalize.css">
+    <title>La palette du goût</title>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/pages.css" type="text/css">
+    <link rel="stylesheet" href="/css/pages.css" type="text/css">
 </head>
 <body>
     <header class="header">
-        <a href="index.html"><i class="fa-solid fa-arrow-left header__icone"></i></a>
-            <img class="header__logo" src="images/logo/ohmyfood.png" alt="logo">
+        <a href="/index.html"><i class="fa-solid fa-arrow-left header__icone"></i></a>
+            <img class="header__logo" src="/images/logo/ohmyfood.png" alt="logo">
     </header>
     <main>
-        <img class="photo_restaurant" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" type="text/css" >
+        <img class="photo_restaurant" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplashH.jpg" alt="" type="text/css">
         <section class="carte">
             <div class="carte__entete">
-                <h2 class="carte__entete__titre">La note enchantée</h2>
+                <h2 class="carte__entete__titre">La palette du goût</h2>
                 <input type="checkbox" id="bouton"/> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
                 <label for="bouton"> <!--Le for permet au label d'être relé au bouton/à la case, ainsi appuyer sur le label cochera/decochera aussi le bouton. Le label peut être un p, une img, une icone, ...-->
                     <i class="fa-regular fa-heart fa-2xl carte__entete__icone"></i>
                 </label>
+                
             </div>
             <!--  Entrées -->
             <section class="carte__section">
                 <h2 class="carte__section__titre"><span class="carte__section__titre--soulignement"> ENTR</span>ÉES</h2>
-                <!--  Entrée 1 -->
+                <!--  Entrée 1 -->                    
                 <div class="carte__section__ligne  carte__section__ligne__entrees">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Ravioles de foie gras</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Fricassée d'escargot</h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Accompagnés de leur crème à la truffe</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Au piment d'espelette </p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">25€</p>
                         </div>
                     </div>
@@ -44,36 +45,23 @@
                 <!--  Entrée 2 -->
                 <div class="carte__section__ligne  carte__section__ligne__entrees" >
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Caviar osciètre</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Foie gras de canard mi-cuit</h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Sur blini à la farine de blé noir</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Et ses copeaux de truffe noire</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">35€</p>
                         </div>
                     </div>
                     <div class="carte__section__ligne__avec_volet">
                         <i class="fa-regular fa-circle-check"></i>
-                    </div>  
+                    </div>
                 </div>
                 <!--  Entrée 3 -->
                 <div class="carte__section__ligne carte__section__ligne__entrees">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Homard et espuma de potiron</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Oeuf au plat</h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Mariné aux zestes d'orange</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Assaisonné à la truffe sur lit de caviar</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">20€</p>
-                        </div>
-                    </div>
-                    <div class="carte__section__ligne__avec_volet">
-                        <i class="fa-regular fa-circle-check"></i>
-                    </div> 
-                </div>
-                <!--  Entrée 4 -->
-                <div class="carte__section__ligne carte__section__ligne__entrees">
-                    <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Foie gras de canard cuit entier</h3>
-                        <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Confiture de figue et pain toasté</p>
-                            <p class="carte__section__ligne__sans_volet__bas__prix">35€</p>
                         </div>
                     </div>
                     <div class="carte__section__ligne__avec_volet">
@@ -87,9 +75,9 @@
                 <!--  Plat 1 -->
                 <div class="carte__section__ligne carte__section__ligne__plats">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Noix de coquilles Saint-Jacques</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Filet de boeuf aux herbes</h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Sur lit de purée de céleri-rave</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Accompagné de sa ribambelle de légumes</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">40€</p>
                         </div>
                     </div>
@@ -100,9 +88,9 @@
                 <!--  Plat 2 -->
                 <div class="carte__section__ligne carte__section__ligne__plats">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Langoustine poêlée</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Parmentier de queue de boeuf</h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Purée de patate douce</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">À la truffe noire sur sa purée de panais</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">35€</p>
                         </div>
                     </div>
@@ -113,9 +101,9 @@
                 <!--  Plat 3 -->
                 <div class="carte__section__ligne carte__section__ligne__plats">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Mijoté de queue de boeuf</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Filet de turbot</h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Et riz sauvage aux zestes de citron</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Aux agrumes</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">44€</p>
                         </div>
                     </div>
@@ -130,9 +118,9 @@
                 <!--  Dessert 1 -->
                 <div class="carte__section__ligne carte__section__ligne__desserts">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Macaron noisette et chocolat</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Paris-Brest</h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Glace au caramel brun et sel de Guérande</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Revisité</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">18€</p>
                         </div>
                     </div>
@@ -143,9 +131,9 @@
                 <!--  Dessert 2 -->
                 <div class="carte__section__ligne carte__section__ligne__desserts">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Baba revisité</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Macaron au chocolat d'exception </h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Avec son coulis de citron</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Et glace à la vanille de Madagascar</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">22€</p>
                         </div>
                     </div>
@@ -156,9 +144,9 @@
                 <!--  Dessert 3 -->
                 <div class="carte__section__ligne carte__section__ligne__desserts">
                     <div class="carte__section__ligne__sans_volet">
-                        <h3 class="carte__section__ligne__sans_volet__titre">Tarte au citron meringuée</h3>
+                        <h3 class="carte__section__ligne__sans_volet__titre">Mousse au chocolat </h3>
                         <div class="carte__section__ligne__sans_volet__bas">
-                            <p class="carte__section__ligne__sans_volet__bas__description">Déstructurée</p>
+                            <p class="carte__section__ligne__sans_volet__bas__description">Au piment d'Espelette et à la truffe noire</p>
                             <p class="carte__section__ligne__sans_volet__bas__prix">23€</p>
                         </div>
                     </div>
@@ -173,7 +161,7 @@
         </section>
     </main>
     <footer class="footer">
-        <img class="footer__logo" src="images/logo/ohmyfood@2x.svg" alt="">
+        <img class="footer__logo" src="/images/logo/ohmyfood@2x.svg" alt="">
         <ul class="footer__list">
             <li><a href="#"><i class="fa-solid fa-utensils footer__list__icone"></i> Proposer un restaurant</a></li>
             <li><a href="#"><i class="fa-solid fa-handshake-angle footer__list__icone"></i> Devenir partenaire</a></li>
@@ -181,4 +169,5 @@
             <li><a href="mailto:Ohmyfood@contact.fr">Contact</a></li>
         </ul>
     </footer>
+</body>
 </html>

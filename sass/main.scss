@@ -38,10 +38,6 @@ body {
         color: inherit;
     }
 }
-
-
-
-
 .container {
     position: fixed; // le loader sera toujours visible sur la fenetre même si on scrolle
     z-index: 999; // le loader couvrira les élements qui le suivent
@@ -55,6 +51,11 @@ body {
     visibility: hidden; // fait disparaitre l'animation
     opacity: 0; // fait disparaitre la couleur d'arriere-plan
     transition: visibility 3s, opacity 6s;
+    & span {
+        margin-bottom: 50px;
+        font-weight: 300;
+        font-size: 21px;
+    }
  }
  .load {
     display: flex;
@@ -86,8 +87,6 @@ body {
         } 
      }   
 }
-
-
 .header{
     padding: 15px 0;
     &__logo {
@@ -138,8 +137,8 @@ body {
             background: linear-gradient(#ff6acd, $color-primary);
             box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);
         }
-    }
 } 
+}
 .fonctionnement {
     padding:$padding-page;
     ul {

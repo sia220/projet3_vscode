@@ -10,6 +10,16 @@ $padding-page : 30px;
     border-radius: 20px;
     border: 0px transparent;
 }
+@mixin tablette {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
 @keyframes remplissage {
     0% {
         opacity: .2;
@@ -140,11 +150,15 @@ body {
 } 
 }
 .fonctionnement {
+    @include tablette{
+        padding-left: 150px;
+        padding-right :150px;
+    }
     padding:$padding-page;
     ul {
         padding: 0;   
     }
-    .fonctionnement__etape:hover .fonctionnement__etape__icone {
+    &__etape:hover .fonctionnement__etape__icone {
         color: $color-primary;
     }
     &__etape {
@@ -220,6 +234,10 @@ body {
 .restaurant {
     background-color:$color-quaternary;
     padding: $padding-page;
+    @include tablette{
+        padding-left: 150px;
+        padding-right :150px;
+    }
     &__carte {
         @include bordure;
         @include ombre ;
@@ -282,13 +300,24 @@ body {
     padding: $padding-page;
     background-color: rgb(52, 52, 52);
     color: #FFFF;
+    @include tablette {
+        display: flex;
+        flex-direction: row-reverse;
+    }
     &__logo {
         filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
         width: 100px;
+        @include tablette {
+            padding-bottom: 11px; // pour aligner le logo aux 4 élements
+        }
     }
     &__list {
         list-style: none;
         padding: 0;
+        @include tablette{
+            display: flex; // pour que les 4 elements passent en ligne
+            margin-right: 30px;  // pour espacer les 4 éléments du logo
+        }
         &__icone {
             width: 20px;
             height: 16px;
@@ -296,6 +325,10 @@ body {
         }
         li {
             padding-bottom: 5px;
+            @include tablette{
+                margin-right: 14px; // pour espacer les 4 élements entre eux
+            }
+           
         }
     }   
 }

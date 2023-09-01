@@ -11,7 +11,7 @@ $padding-page : 30px;
     border: 0px transparent;
 }
 @mixin tablette {
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    @media screen and (min-width: 768px) {
         @content;
     }
 }
@@ -151,12 +151,17 @@ body {
 }
 .fonctionnement {
     @include tablette{
-        padding-left: 150px;
-        padding-right :150px;
+        padding-left: 100px;
+        padding-right :100px;
     }
     padding:$padding-page;
     ul {
         padding: 0;   
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }   
     }
     &__etape:hover .fonctionnement__etape__icone {
         color: $color-primary;
@@ -169,6 +174,9 @@ body {
         padding: 25px 0;
         background-color: $color-quaternary;
         list-style: none;
+        @include desktop {
+          width: 30%;
+        }
         &:hover {
             background-color:#f5eef7;
         }
@@ -235,8 +243,17 @@ body {
     background-color:$color-quaternary;
     padding: $padding-page;
     @include tablette{
-        padding-left: 150px;
-        padding-right :150px;
+        padding-left: 100px;
+        padding-right :100px;
+    }
+    &__paire {
+        @include desktop {
+        display: flex;
+        justify-content: space-between;
+        }
+       
+     
+    
     }
     &__carte {
         @include bordure;
@@ -244,6 +261,9 @@ body {
         height: 300px; 
         margin-bottom: 50px;
         background-color: white;
+        @include desktop {
+            width:45%;
+        }
         &__container {
             position: relative;
             height: 70%;
@@ -326,9 +346,10 @@ body {
         li {
             padding-bottom: 5px;
             @include tablette{
-                margin-right: 14px; // pour espacer les 4 élements entre eux
+                margin-right: 15px; // pour espacer les 4 élements entre eux
             }
            
         }
     }   
 }
+

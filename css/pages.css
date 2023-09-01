@@ -84,10 +84,16 @@ body a {
   padding: 30px;
   margin-bottom: -65px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .carte {
     padding-right: 100px;
     padding-left: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carte {
+    margin-right: 100px;
+    margin-left: 100px;
   }
 }
 .carte__entete {
@@ -95,6 +101,11 @@ body a {
   justify-content: space-between;
   align-items: baseline;
   padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .carte__entete {
+    justify-content: center;
+  }
 }
 .carte__entete__titre {
   font-family: Shrikhand, sans-serif;
@@ -212,7 +223,7 @@ body a {
   background-color: rgb(52, 52, 52);
   color: white;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .footer {
     display: flex;
     flex-direction: row-reverse;
@@ -222,7 +233,7 @@ body a {
   filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
   width: 100px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .footer__logo {
     padding-bottom: 11px;
   }
@@ -231,7 +242,7 @@ body a {
   list-style: none;
   padding: 0;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .footer__list {
     display: flex;
     margin-right: 30px;
@@ -245,7 +256,7 @@ body a {
 .footer__list li {
   padding-bottom: 5px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .footer__list li {
     margin-right: 15px;
   }

@@ -1,0 +1,355 @@
+$color-primary : #9356DC;
+$color-secondary : #FF79DA;
+$color-teritiary : #99E2D0;
+$color-quaternary : rgb(247,247,247);
+$padding-page : 30px;
+@mixin ombre {
+    box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+}
+@mixin bordure {
+    border-radius: 20px;
+    border: 0px transparent;
+}
+@mixin tablette {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@keyframes remplissage {
+    0% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes barres {
+    0% {
+     transform: scaleY(0.5);
+    }
+    100% {
+     transform: scaleY(1);
+    }
+}
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+body {
+    margin: 0;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+    }
+}
+.container {
+    position: fixed; // le loader sera toujours visible sur la fenetre même si on scrolle
+    z-index: 999; // le loader couvrira les élements qui le suivent
+    width: 100%; // le loader prendra toute la largeur de la fenetre
+    height: 100%; // le loader prendra toute la hauteur de la fenetre
+    background-color: white; // couleur d'arrière-plan du loader
+    display: flex; // pour pouvoir centrer le loader
+    flex-direction: column; // pour que les blocs de l'animation se superposent en colonne
+    align-items: center; // centre le loader en horizontale
+    justify-content: center; // centre le loader en verticale
+    visibility: hidden; // fait disparaitre l'animation
+    opacity: 0; // fait disparaitre la couleur d'arriere-plan
+    transition: visibility 3s, opacity 6s;
+    & span {
+        margin-bottom: 50px;
+        font-weight: 300;
+        font-size: 21px;
+    }
+ }
+ .load {
+    display: flex;
+    width: 50%;
+    height: 30vh;
+    justify-content: space-evenly;
+    &__bar {
+        background-color: $color-teritiary;
+        height: 100%;
+        width:3vh;
+        animation-name: barres;
+        animation-duration: 900ms;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                animation-delay: $i * 180ms;
+            }
+            &--#{$i}-inv {
+                animation-delay: $i * 200ms + random(100)*15ms;
+                animation-direction: alternate-reverse;
+                background-color: $color-secondary;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        } 
+     }   
+}
+.header{
+    padding: 15px 0;
+    &__logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        }
+} 
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
+    padding: 15px 0;
+    background-color: rgb(231, 231, 231);
+    font-weight: 500;
+    &__icone {
+        margin: 0;  
+        padding-right: 20px;
+    }   
+    &__ville {
+       margin: 0;   
+    }
+} 
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-quaternary;
+    padding: $padding-page;
+    &__titre {
+        margin: 0 ;
+        font-weight: 750;
+        text-align: center;
+    } 
+    &__description {
+        text-align: center;
+    }
+    &__bouton {
+        font-weight: 500;
+        @include bordure;
+        @include ombre ;
+        padding: 13px 17px;
+        color:white;
+        background: linear-gradient(#f392d8, $color-primary);
+        &:hover {
+            background: linear-gradient(#ff6acd, $color-primary);
+            box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);
+        }
+} 
+}
+.fonctionnement {
+    @include tablette{
+        padding-left: 100px;
+        padding-right :100px;
+    }
+    padding:$padding-page;
+    ul {
+        padding: 0;   
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }   
+    }
+    &__etape:hover .fonctionnement__etape__icone {
+        color: $color-primary;
+    }
+    &__etape {
+        @include bordure;
+        @include ombre ;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding: 25px 0;
+        background-color: $color-quaternary;
+        list-style: none;
+        @include desktop {
+          width: 30%;
+        }
+        &:hover {
+            background-color:#f5eef7;
+        }
+        &__chiffre{
+            @include bordure;
+            position: relative;
+            right: 15px;
+            padding: 5px 10px;
+            background-color: $color-primary;
+            color: white;
+            font-weight: 500;       
+        }
+        &__icone {
+            color: grey;
+            padding-right: 15px;   
+        }
+    }
+}
+#bouton {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
+#boutonn {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
+#boutonnn {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
+#boutonnnn {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: remplissage 300ms;
+}
+}
+.restaurant {
+    background-color:$color-quaternary;
+    padding: $padding-page;
+    @include tablette{
+        padding-left: 100px;
+        padding-right :100px;
+    }
+    &__paire {
+        @include desktop {
+        display: flex;
+        justify-content: space-between;
+        }
+       
+     
+    
+    }
+    &__carte {
+        @include bordure;
+        @include ombre ;
+        height: 300px; 
+        margin-bottom: 50px;
+        background-color: white;
+        @include desktop {
+            width:45%;
+        }
+        &__container {
+            position: relative;
+            height: 70%;
+            &__image {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 15px  15px 0 0;
+                &--nouveau {
+                    border: $color-teritiary 1px solid;
+                    border-radius: 2px;
+                    position: absolute;
+                    right: 5%;
+                    bottom: 70%;
+                    padding: 5px 15px;
+                    font-weight: 500;
+                    background-color: $color-teritiary;
+                    color: #2e806c;
+                }
+            }
+        }
+        &__bas {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            &__texte {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &__titre, &__quartier {
+                    margin: 0;
+                   white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    }
+                &__quartier {
+                    font-size:22px ;
+                    font-weight: 300;
+                }
+            }
+            &__label {
+                margin-left: auto;
+                padding-left: 10px;
+                &__icone {
+                    padding: 14px 0px;
+                }
+            }
+          
+
+        }
+    }
+}
+.footer {
+    padding: $padding-page;
+    background-color: rgb(52, 52, 52);
+    color: #FFFF;
+    @include tablette {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    &__logo {
+        filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
+        width: 100px;
+        @include tablette {
+            padding-bottom: 11px; // pour aligner le logo aux 4 élements
+        }
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        @include tablette{
+            display: flex; // pour que les 4 elements passent en ligne
+            margin-right: 30px;  // pour espacer les 4 éléments du logo
+        }
+        &__icone {
+            width: 20px;
+            height: 16px;
+            padding-right: 10px;
+        }
+        li {
+            padding-bottom: 5px;
+            @include tablette{
+                margin-right: 15px; // pour espacer les 4 élements entre eux
+            }
+           
+        }
+    }   
+}
+

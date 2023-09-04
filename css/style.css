@@ -1,3 +1,405 @@
+@keyframes remplissage {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes barres {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
 
+body {
+  margin: 0;
+}
+body a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 3s, opacity 6s;
+}
+.container span {
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-size: 21px;
+}
+
+.load {
+  display: flex;
+  width: 50%;
+  height: 30vh;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #99E2D0;
+  height: 100%;
+  width: 3vh;
+  animation-name: barres;
+  animation-duration: 900ms;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.load__bar--1 {
+  animation-delay: 180ms;
+}
+.load__bar--1-inv {
+  animation-delay: 1685ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--1-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--2 {
+  animation-delay: 360ms;
+}
+.load__bar--2-inv {
+  animation-delay: 1150ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--2-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--3 {
+  animation-delay: 540ms;
+}
+.load__bar--3-inv {
+  animation-delay: 1155ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--3-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--4 {
+  animation-delay: 720ms;
+}
+.load__bar--4-inv {
+  animation-delay: 1670ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--4-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--5 {
+  animation-delay: 900ms;
+}
+.load__bar--5-inv {
+  animation-delay: 2170ms;
+  animation-direction: alternate-reverse;
+  background-color: #FF79DA;
+}
+.load__bar--5-inv:hover {
+  animation-play-state: paused;
+}
+
+.header {
+  padding: 15px 0;
+}
+.header__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
+  padding: 15px 0;
+  background-color: rgb(231, 231, 231);
+  font-weight: 500;
+}
+.localisation__icone {
+  margin: 0;
+  padding-right: 20px;
+}
+.localisation__ville {
+  margin: 0;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  padding: 30px;
+}
+.reservation__titre {
+  margin: 0;
+  font-weight: 750;
+  text-align: center;
+}
+.reservation__description {
+  text-align: center;
+}
+.reservation__bouton {
+  font-weight: 500;
+  border-radius: 20px;
+  border: 0px transparent;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  padding: 13px 17px;
+  color: white;
+  background: linear-gradient(#f392d8, #9356DC);
+}
+.reservation__bouton:hover {
+  background: linear-gradient(#ff6acd, #9356DC);
+  box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);
+}
+
+.fonctionnement {
+  padding: 30px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+.fonctionnement ul {
+  padding: 0;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.fonctionnement__etape:hover .fonctionnement__etape__icone {
+  color: #9356DC;
+}
+.fonctionnement__etape {
+  border-radius: 20px;
+  border: 0px transparent;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 25px 0;
+  background-color: rgb(247, 247, 247);
+  list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__etape {
+    width: 30%;
+  }
+}
+.fonctionnement__etape:hover {
+  background-color: #f5eef7;
+}
+.fonctionnement__etape__chiffre {
+  border-radius: 20px;
+  border: 0px transparent;
+  position: relative;
+  right: 15px;
+  padding: 5px 10px;
+  background-color: #9356DC;
+  color: white;
+  font-weight: 500;
+}
+.fonctionnement__etape__icone {
+  color: grey;
+  padding-right: 15px;
+}
+
+#bouton {
+  display: none;
+}
+#bouton:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+#boutonn {
+  display: none;
+}
+#boutonn:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+#boutonnn {
+  display: none;
+}
+#boutonnn:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+#boutonnnn {
+  display: none;
+}
+#boutonnnn:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+.restaurant {
+  background-color: rgb(247, 247, 247);
+  padding: 30px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__paire {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.restaurant__carte {
+  border-radius: 20px;
+  border: 0px transparent;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  height: 300px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__carte {
+    width: 45%;
+  }
+}
+.restaurant__carte__container {
+  position: relative;
+  height: 70%;
+}
+.restaurant__carte__container__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant__carte__container__image--nouveau {
+  border: #99E2D0 1px solid;
+  border-radius: 2px;
+  position: absolute;
+  right: 5%;
+  bottom: 70%;
+  padding: 5px 15px;
+  font-weight: 500;
+  background-color: #99E2D0;
+  color: #2e806c;
+}
+.restaurant__carte__bas {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.restaurant__carte__bas__texte {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurant__carte__bas__texte__titre, .restaurant__carte__bas__texte__quartier {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurant__carte__bas__texte__quartier {
+  font-size: 22px;
+  font-weight: 300;
+}
+.restaurant__carte__bas__label {
+  margin-left: auto;
+  padding-left: 10px;
+}
+.restaurant__carte__bas__label__icone {
+  padding: 14px 0px;
+}
+
+.footer {
+  padding: 30px;
+  background-color: rgb(52, 52, 52);
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.footer__logo {
+  filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
+  width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    padding-bottom: 11px;
+  }
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__list {
+    display: flex;
+    margin-right: 30px;
+  }
+}
+.footer__list__icone {
+  width: 20px;
+  height: 16px;
+  padding-right: 10px;
+}
+.footer__list li {
+  padding-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .footer__list li {
+    margin-right: 15px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

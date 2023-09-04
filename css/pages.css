@@ -1,0 +1,265 @@
+@keyframes remplissage {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+@keyframes volet {
+  0% {
+    transform: translateX(99px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header :first-of-type {
+  width: 33%;
+}
+.header__icone {
+  padding-left: 20px;
+}
+
+.photo_restaurant {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+#bouton {
+  display: none;
+}
+#bouton:checked + label > i {
+  font-weight: 900;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: remplissage 300ms;
+}
+
+.carte {
+  position: relative;
+  bottom: 65px;
+  border-radius: 40px 40px 0px 0;
+  background-color: rgb(247, 247, 247);
+  border: 0px transparent;
+  padding: 30px;
+  margin-bottom: -65px;
+}
+@media screen and (min-width: 768px) {
+  .carte {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carte {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
+.carte__entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .carte__entete {
+    justify-content: center;
+  }
+}
+.carte__entete__titre {
+  font-family: Shrikhand, sans-serif;
+  font-weight: 500;
+}
+.carte__entete__icone {
+  padding: 20px;
+}
+.carte__section {
+  margin-bottom: 30px;
+}
+.carte__section__titre {
+  font-weight: 300;
+}
+.carte__section__titre--soulignement {
+  border-bottom: 3.5px solid #99E2D0;
+}
+.carte__section__ligne {
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  border-radius: 20px;
+  border: 0px transparent;
+  overflow: hidden;
+  background: white;
+  margin-bottom: 14px;
+  opacity: 1;
+  display: flex;
+}
+.carte__section__ligne__entrees {
+  animation: apparition 2000ms 0s both;
+}
+.carte__section__ligne__plats {
+  animation: apparition 2000ms 1s both;
+}
+.carte__section__ligne__desserts {
+  animation: apparition 2000ms 2s both;
+}
+.carte__section__ligne__sans_volet {
+  padding: 15px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__section__ligne__sans_volet__titre {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__section__ligne__sans_volet__bas {
+  display: flex;
+  justify-content: space-between;
+}
+.carte__section__ligne__sans_volet__bas__description {
+  margin: 0;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte__section__ligne__sans_volet__bas__prix {
+  margin: 0;
+  padding-left: 5px;
+  font-weight: 500;
+}
+.carte__section__ligne__avec_volet {
+  transform: translateX(80px);
+  padding: 15px;
+  width: 0;
+  background: #99E2D0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carte__section__ligne__avec_volet i {
+  color: white;
+}
+.carte__section__ligne:hover .carte__section__ligne__sans_volet__bas__prix {
+  transition-duration: 500ms;
+}
+.carte__section__ligne:hover .carte__section__ligne__avec_volet {
+  animation: volet both 500ms;
+  width: 80px;
+}
+.carte__section__ligne:hover .carte__section__ligne__avec_volet i {
+  animation: rotation 500ms 150ms both;
+}
+.carte__commander {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.carte__commander__bouton {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
+  border-radius: 20px;
+  border: 0px transparent;
+  padding: 10px 30px;
+  color: white;
+  background: linear-gradient(#f392d8, #9356DC);
+  font-weight: 400;
+}
+.carte__commander__bouton:hover {
+  background: linear-gradient(#ff6acd, #9356DC);
+  box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);
+}
+
+.footer {
+  padding: 30px;
+  background-color: rgb(52, 52, 52);
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.footer__logo {
+  filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
+  width: 100px;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    padding-bottom: 11px;
+  }
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__list {
+    display: flex;
+    margin-right: 30px;
+  }
+}
+.footer__list__icone {
+  width: 20px;
+  height: 16px;
+  padding-right: 10px;
+}
+.footer__list li {
+  padding-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .footer__list li {
+    margin-right: 15px;
+  }
+}
+
+/*# sourceMappingURL=pages.css.map */

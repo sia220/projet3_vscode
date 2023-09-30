@@ -69,7 +69,7 @@ body a {
   animation-delay: 180ms;
 }
 .load__bar--1-inv {
-  animation-delay: 1685ms;
+  animation-delay: 1220ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -80,7 +80,7 @@ body a {
   animation-delay: 360ms;
 }
 .load__bar--2-inv {
-  animation-delay: 1150ms;
+  animation-delay: 1600ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -91,7 +91,7 @@ body a {
   animation-delay: 540ms;
 }
 .load__bar--3-inv {
-  animation-delay: 1155ms;
+  animation-delay: 1785ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -102,7 +102,7 @@ body a {
   animation-delay: 720ms;
 }
 .load__bar--4-inv {
-  animation-delay: 1670ms;
+  animation-delay: 1235ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -113,7 +113,7 @@ body a {
   animation-delay: 900ms;
 }
 .load__bar--5-inv {
-  animation-delay: 2170ms;
+  animation-delay: 1345ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -146,6 +146,8 @@ body a {
 }
 .localisation__ville {
   margin: 0;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .reservation {

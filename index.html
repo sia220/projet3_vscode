@@ -7,7 +7,7 @@
     <title>Ohmyfood</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="/prefixed/style.css" type="text/css">
 </head>
 <body>
@@ -34,12 +34,12 @@
     <main>
         <section class="localisation">
             <i class="fa-solid fa-location-dot localisation__icone"></i>
-            <p class="localisation__ville"> Paris, Belleville</p>
+            <h1 class="localisation__ville"> Paris, Belleville</h1>
         </section>
         <section class="reservation">
             <h1 class="reservation__titre">Réservez le menu qui vous convient</h1>
             <p class="reservation__description">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <button class="reservation__bouton"><a href="#restau"> Explorer nos restaurants</a></button>
+            <div class="reservation__bouton"><a href="#restau"> Explorer nos restaurants</a></div>
         </section>
         <section class="fonctionnement">
             <h1 class="fonctionnement__titre">Fonctionnement</h1>
@@ -67,7 +67,7 @@
             <article class="restaurant__carte">
                 <a href="/restau/restaurant1.html">
                     <div class="restaurant__carte__container">
-                        <img class="restaurant__carte__container__image" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplashH.jpg" alt="" type="text/css">
+                        <img class="restaurant__carte__container__image" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplashH.jpg" alt="" >
                         <p class="restaurant__carte__container__image--nouveau">Nouveau</p>
                     </div>
                 </a>
@@ -78,7 +78,7 @@
                             <p class="restaurant__carte__bas__texte__quartier">Ménilmontant</p>
                         </div>
                     </a>
-                    <input type="checkbox" id="bouton"/> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
+                    <input type="checkbox" id="bouton"> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
                     <label class="restaurant__carte__bas__label" for="bouton"> <!--Le for permet au label d'être relé au bouton/à la case, ainsi appuyer sur le label cochera/decochera aussi le bouton. Le label peut être un p, une img, une icone, ...-->
                         <i class="fa-regular fa-heart fa-2xl restaurant__carte__bas__label__icone"></i>
                     </label>
@@ -88,7 +88,7 @@
             <article class="restaurant__carte">
                 <a href="/restau/restaurant2.html">
                     <div class="restaurant__carte__container">
-                        <img class="restaurant__carte__container__image" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" type="text/css">
+                        <img class="restaurant__carte__container__image" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
                         <p class="restaurant__carte__container__image--nouveau">Nouveau</p>
                     </div>
                 </a>
@@ -99,7 +99,7 @@
                             <p class="restaurant__carte__bas__texte__quartier">Charonne</p>
                         </div>
                     </a>
-                    <input type="checkbox" id="boutonn"/> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
+                    <input type="checkbox" id="boutonn"> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
                     <label class="restaurant__carte__bas__label" for="boutonn"> <!--Le for permet au label d'être relé au bouton/à la case, ainsi appuyer sur le label cochera/decochera aussi le bouton. Le label peut être un p, une img, une icone, ...-->
                         <i class="fa-regular fa-heart fa-2xl restaurant__carte__bas__label__icone"></i>
                     </label>
@@ -111,7 +111,7 @@
             <article class="restaurant__carte">
                 <a  href="/restau/restaurant3.html">
                     <div class="restaurant__carte__container">
-                        <img class="restaurant__carte__container__image"  src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" type="text/css">
+                        <img class="restaurant__carte__container__image"  src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" >
                     </div>
                 </a>
                 <div class="restaurant__carte__bas">
@@ -121,7 +121,7 @@
                             <p class="restaurant__carte__bas__texte__quartier">Cité Rouge</p>
                         </div>
                     </a>
-                    <input type="checkbox" id="boutonnn"/> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
+                    <input type="checkbox" id="boutonnn"> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
                     <label class="restaurant__carte__bas__label" for="boutonnn"> <!--Le for permet au label d'être relé au bouton/à la case, ainsi appuyer sur le label cochera/decochera aussi le bouton. Le label peut être un p, une img, une icone, ...-->
                         <i class="fa-regular fa-heart fa-2xl restaurant__carte__bas__label__icone"></i>
                     </label>
@@ -131,7 +131,7 @@
             <article class="restaurant__carte">
                 <a href="/restau/restaurant4.html">
                     <div class="restaurant__carte__container">
-                        <img class="restaurant__carte__container__image" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" type="text/css">
+                        <img class="restaurant__carte__container__image" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" >
                     </div>
                 </a>
                 <div class="restaurant__carte__bas">
@@ -141,7 +141,7 @@
                             <p class="restaurant__carte__bas__texte__quartier">Folie-Méricourt</p>
                         </div>
                     </a>
-                    <input type="checkbox" id="boutonnnn"/> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
+                    <input type="checkbox" id="boutonnnn"> <!-- Le input crée le bouton/la case. Le type détérmine le type de bouton/case à créer. Le id permet de relier le bouton/la case au label.-->
                     <label class="restaurant__carte__bas__label" for="boutonnnn"> <!--Le for permet au label d'être relé au bouton/à la case, ainsi appuyer sur le label cochera/decochera aussi le bouton. Le label peut être un p, une img, une icone, ...-->
                         <i class="fa-regular fa-heart fa-2xl restaurant__carte__bas__label__icone"></i>
                     </label>

@@ -201,17 +201,19 @@ body a {
   width: 50%;
 }
 .carte__commander__bouton {
+  display: flex;
   width: 100%;
-  display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px 30px;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
   box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   border-radius: 20px;
   border: 0px transparent;
-  padding: 10px 30px;
-  color: white;
   background: linear-gradient(#f392d8, #9356DC);
-  font-weight: 400;
 }
 .carte__commander__bouton:hover {
   background: linear-gradient(#ff6acd, #9356DC);

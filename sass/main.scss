@@ -60,7 +60,7 @@ body {
     justify-content: center; // centre le loader en verticale
     visibility: hidden; // fait disparaitre l'animation
     opacity: 0; // fait disparaitre la couleur d'arriere-plan
-    transition: visibility 3s, opacity 6s;
+    transition: visibility 2.5s, opacity 3s;
     & span {
         margin-bottom: 50px;
         font-weight: 300;

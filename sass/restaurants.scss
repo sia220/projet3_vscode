@@ -210,16 +210,18 @@ body {
        margin-right: auto;
        width: 50%;
        &__bouton {
+        display: flex;
         width: 100%;
-        display: block;
         margin-left: auto;
         margin-right: auto;
+        padding: 10px 30px;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
         @include ombre;
         @include bordure;
-        padding: 10px 30px;
-        color: white;
         background: linear-gradient(#f392d8, $color-primary);
-        font-weight: 400;
         &:hover {
             background: linear-gradient(#ff6acd, $color-primary);
             box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);

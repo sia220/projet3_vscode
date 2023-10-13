@@ -40,7 +40,7 @@ body a {
   justify-content: center;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 2.5s, opacity 3s;
+  transition: visibility 3s, opacity 10s;
 }
 .container span {
   margin-bottom: 50px;
@@ -69,7 +69,7 @@ body a {
   animation-delay: 180ms;
 }
 .load__bar--1-inv {
-  animation-delay: 485ms;
+  animation-delay: 710ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -80,7 +80,7 @@ body a {
   animation-delay: 360ms;
 }
 .load__bar--2-inv {
-  animation-delay: 955ms;
+  animation-delay: 730ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -91,7 +91,7 @@ body a {
   animation-delay: 540ms;
 }
 .load__bar--3-inv {
-  animation-delay: 885ms;
+  animation-delay: 960ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -102,7 +102,7 @@ body a {
   animation-delay: 720ms;
 }
 .load__bar--4-inv {
-  animation-delay: 2165ms;
+  animation-delay: 980ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }
@@ -113,7 +113,7 @@ body a {
   animation-delay: 900ms;
 }
 .load__bar--5-inv {
-  animation-delay: 1855ms;
+  animation-delay: 2305ms;
   animation-direction: alternate-reverse;
   background-color: #FF79DA;
 }

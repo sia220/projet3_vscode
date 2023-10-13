@@ -28,12 +28,13 @@ $padding-page : 30px;
     }
 }
 @keyframes apparition {
-    to {
-     opacity: 1;
-    }
     from {
-       opacity: 0;
+        opacity: 0;
         transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 @keyframes volet{
@@ -114,6 +115,9 @@ body {
         justify-content: space-between;
         align-items: baseline;
         padding-right: 20px;
+        &__icone {
+            padding: 14px 0; //pour que la taille de l'icone soit égale à sa taille réelle. Ainsi, l'animation ne s'activera que sur le coeur et pas autour
+        }
         @include desktop {
             justify-content: center;
         }
@@ -122,7 +126,7 @@ body {
             font-weight: 500;
         }
         &__icone {
-                padding: 20px;
+                margin-left: 20px; // pour espacer le coeur du titre
         }
     }
     &__section {
@@ -140,7 +144,6 @@ body {
             overflow: hidden;
             background: white;
             margin-bottom: 14px;
-            opacity: 1;
             display: flex;
             &__entrees {
                 animation: apparition 2000ms 0s both ;

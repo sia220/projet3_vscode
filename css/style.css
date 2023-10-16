@@ -55,7 +55,7 @@ body a {
   justify-content: space-evenly;
 }
 .load__bar {
-  background-color: #99E2D0;
+  background-color: #9356DC;
   height: 100%;
   width: 3vh;
   animation-name: barres;
@@ -69,9 +69,9 @@ body a {
   animation-delay: 180ms;
 }
 .load__bar--1-inv {
-  animation-delay: 710ms;
+  animation-delay: 440ms;
   animation-direction: alternate-reverse;
-  background-color: #FF79DA;
+  background-color: #99E2D0;
 }
 .load__bar--1-inv:hover {
   animation-play-state: paused;
@@ -80,9 +80,9 @@ body a {
   animation-delay: 360ms;
 }
 .load__bar--2-inv {
-  animation-delay: 730ms;
+  animation-delay: 1495ms;
   animation-direction: alternate-reverse;
-  background-color: #FF79DA;
+  background-color: #99E2D0;
 }
 .load__bar--2-inv:hover {
   animation-play-state: paused;
@@ -91,9 +91,9 @@ body a {
   animation-delay: 540ms;
 }
 .load__bar--3-inv {
-  animation-delay: 960ms;
+  animation-delay: 1785ms;
   animation-direction: alternate-reverse;
-  background-color: #FF79DA;
+  background-color: #99E2D0;
 }
 .load__bar--3-inv:hover {
   animation-play-state: paused;
@@ -102,9 +102,9 @@ body a {
   animation-delay: 720ms;
 }
 .load__bar--4-inv {
-  animation-delay: 980ms;
+  animation-delay: 1910ms;
   animation-direction: alternate-reverse;
-  background-color: #FF79DA;
+  background-color: #99E2D0;
 }
 .load__bar--4-inv:hover {
   animation-play-state: paused;
@@ -113,9 +113,9 @@ body a {
   animation-delay: 900ms;
 }
 .load__bar--5-inv {
-  animation-delay: 2305ms;
+  animation-delay: 1315ms;
   animation-direction: alternate-reverse;
-  background-color: #FF79DA;
+  background-color: #99E2D0;
 }
 .load__bar--5-inv:hover {
   animation-play-state: paused;
@@ -168,7 +168,6 @@ body a {
 .reservation__bouton {
   font-weight: 500;
   border-radius: 20px;
-  border: 0px transparent;
   box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   padding: 13px 17px;
   color: white;
@@ -203,7 +202,6 @@ body a {
 }
 .fonctionnement__etape {
   border-radius: 20px;
-  border: 0px transparent;
   box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   font-weight: 600;
   margin-bottom: 20px;
@@ -221,7 +219,6 @@ body a {
 }
 .fonctionnement__etape__chiffre {
   border-radius: 20px;
-  border: 0px transparent;
   position: relative;
   right: 15px;
   padding: 5px 10px;
@@ -241,7 +238,6 @@ body a {
   font-weight: 900;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   animation: remplissage 300ms;
 }
@@ -253,7 +249,6 @@ body a {
   font-weight: 900;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   animation: remplissage 300ms;
 }
@@ -265,7 +260,6 @@ body a {
   font-weight: 900;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   animation: remplissage 300ms;
 }
@@ -277,7 +271,6 @@ body a {
   font-weight: 900;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   animation: remplissage 300ms;
 }
@@ -300,7 +293,6 @@ body a {
 }
 .restaurant__carte {
   border-radius: 20px;
-  border: 0px transparent;
   box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   height: 300px;
   margin-bottom: 50px;
@@ -390,11 +382,6 @@ body a {
     margin-right: 30px;
   }
 }
-.footer__list__icone {
-  width: 20px;
-  height: 16px;
-  padding-right: 10px;
-}
 .footer__list li {
   padding-bottom: 5px;
 }
@@ -402,6 +389,11 @@ body a {
   .footer__list li {
     margin-right: 15px;
   }
+}
+.footer__list__icone {
+  width: 20px;
+  height: 16px;
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

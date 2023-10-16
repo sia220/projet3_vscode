@@ -8,7 +8,6 @@ $padding-page : 30px;
 }
 @mixin bordure {
     border-radius: 20px;
-    border: 0px transparent;
 }
 @mixin tablette {
     @media screen and (min-width: 768px) {
@@ -73,7 +72,7 @@ body {
     height: 30vh;
     justify-content: space-evenly;
     &__bar {
-        background-color: $color-teritiary;
+        background-color: $color-primary;
         height: 100%;
         width:3vh;
         animation-name: barres;
@@ -89,7 +88,7 @@ body {
             &--#{$i}-inv {
                 animation-delay: $i * 200ms + random(100)*15ms;
                 animation-direction: alternate-reverse;
-                background-color: $color-secondary;
+                background-color: $color-teritiary;
                 &:hover {
                     animation-play-state: paused;
                 }
@@ -203,7 +202,6 @@ body {
     font-weight: 900;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
     animation: remplissage 300ms;
 }
@@ -214,7 +212,6 @@ body {
     font-weight: 900;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
     animation: remplissage 300ms;
 }
@@ -225,7 +222,6 @@ body {
     font-weight: 900;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
     animation: remplissage 300ms;
 }
@@ -236,7 +232,6 @@ body {
     font-weight: 900;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
     animation: remplissage 300ms;
 }
@@ -253,9 +248,6 @@ body {
         display: flex;
         justify-content: space-between;
         }
-       
-     
-    
     }
     &__carte {
         @include bordure;
@@ -297,7 +289,7 @@ body {
                 text-overflow: ellipsis;
                 &__titre, &__quartier {
                     margin: 0;
-                   white-space: nowrap;
+                    white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     }
@@ -340,18 +332,17 @@ body {
             display: flex; // pour que les 4 elements passent en ligne
             margin-right: 30px;  // pour espacer les 4 éléments du logo
         }
-        &__icone {
-            width: 20px;
-            height: 16px;
-            padding-right: 10px;
-        }
         li {
             padding-bottom: 5px;
             @include tablette{
                 margin-right: 15px; // pour espacer les 4 élements entre eux
-            }
-           
+            }   
         }
+        &__icone {
+            width: 20px;
+            height: 16px;
+            padding-right: 10px;
+        } 
     }   
 }
 

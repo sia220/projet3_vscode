@@ -3,21 +3,19 @@ $color-secondary : #FF79DA;
 $color-teritiary : #99E2D0;
 $color-quaternary : rgb(247,247,247);
 $padding-page : 30px;
+@keyframes barres {
+    0% {
+     transform: scaleY(0.5);
+    }
+    100% {
+     transform: scaleY(1);
+    }
+}
 @mixin ombre {
     box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
 }
 @mixin bordure {
     border-radius: 20px;
-}
-@mixin tablette {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
-@mixin desktop {
-    @media screen and (min-width: 1024px) {
-        @content;
-    }
 }
 @keyframes remplissage {
     0% {
@@ -27,12 +25,14 @@ $padding-page : 30px;
         opacity: 1;
     }
 }
-@keyframes barres {
-    0% {
-     transform: scaleY(0.5);
+@mixin tablette {
+    @media screen and (min-width: 768px) {
+        @content;
     }
-    100% {
-     transform: scaleY(1);
+}
+@mixin desktop {
+    @media screen and (min-width: 1024px) {
+        @content;
     }
 }
 * {
@@ -52,11 +52,11 @@ body {
     z-index: 999; // le loader couvrira les élements qui le suivent
     width: 100%; // le loader prendra toute la largeur de la fenetre
     height: 100%; // le loader prendra toute la hauteur de la fenetre
-    background-color: white; // couleur d'arrière-plan du loader
     display: flex; // pour pouvoir centrer le loader
     flex-direction: column; // pour que les blocs de l'animation se superposent en colonne
     align-items: center; // centre le loader en horizontale
     justify-content: center; // centre le loader en verticale
+    background-color: white; // couleur d'arrière-plan du loader
     visibility: hidden; // fait disparaitre l'animation
     opacity: 0; // fait disparaitre la couleur d'arriere-plan
     transition: visibility 3s, opacity 10s;
@@ -72,9 +72,9 @@ body {
     height: 30vh;
     justify-content: space-evenly;
     &__bar {
-        background-color: $color-primary;
         height: 100%;
         width:3vh;
+        background-color: $color-primary;
         animation-name: barres;
         animation-duration: 900ms;
         animation-fill-mode: backwards;
@@ -86,9 +86,9 @@ body {
                 animation-delay: $i * 180ms;
             }
             &--#{$i}-inv {
+                background-color: $color-teritiary;
                 animation-delay: $i * 200ms + random(100)*15ms;
                 animation-direction: alternate-reverse;
-                background-color: $color-teritiary;
                 &:hover {
                     animation-play-state: paused;
                 }
@@ -107,12 +107,12 @@ body {
 } 
 .localisation {
     display: flex;
+    padding: 15px 0;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
-    padding: 15px 0;
-    background-color: rgb(231, 231, 231);
     font-weight: 500;
+    box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
+    background-color: rgb(231, 231, 231);
     &__icone {
         margin: 0;  
         padding-right: 20px;
@@ -125,24 +125,24 @@ body {
 } 
 .reservation {
     display: flex;
+    padding: $padding-page;
     flex-direction: column;
     align-items: center;
     background-color: $color-quaternary;
-    padding: $padding-page;
     &__titre {
         margin: 0 ;
-        font-weight: 750;
         text-align: center;
+        font-weight: 750;
     } 
     &__description {
         text-align: center;
     }
     &__bouton {
-        font-weight: 500;
-        @include bordure;
-        @include ombre ;
         padding: 13px 17px;
         color:white;
+        font-weight: 500;
+        @include bordure;
+        @include ombre ;  
         background: linear-gradient(#f392d8, $color-primary);
         &:hover {
             background: linear-gradient(#ff6acd, $color-primary);
@@ -151,11 +151,11 @@ body {
 } 
 }
 .fonctionnement {
-    @include tablette{
-        padding-left: 100px;
-        padding-right :100px;
-    }
     padding:$padding-page;
+    @include tablette{
+        padding-left: 90px;
+        padding-right :90px;
+    }
     ul {
         padding: 0;   
         @include desktop {
@@ -164,35 +164,35 @@ body {
             justify-content: space-between;
         }   
     }
-    &__etape:hover .fonctionnement__etape__icone {
-        color: $color-primary;
-    }
     &__etape {
-        @include bordure;
-        @include ombre ;
-        font-weight: 600;
         margin-bottom: 20px;
         padding: 25px 0;
+        font-weight: 600;
+        @include bordure;
+        @include ombre ;
         background-color: $color-quaternary;
         list-style: none;
-        @include desktop {
-          width: 30%;
-        }
         &:hover {
             background-color:#f5eef7;
         }
+        &:hover .fonctionnement__etape__icone {
+            color: $color-primary;
+        }
+        @include desktop {
+            width: 30%;
+        }
         &__chiffre{
-            @include bordure;
             position: relative;
             right: 15px;
             padding: 5px 10px;
-            background-color: $color-primary;
             color: white;
-            font-weight: 500;       
+            font-weight: 500; 
+            @include bordure;
+            background-color: $color-primary; 
         }
         &__icone {
-            color: grey;
             padding-right: 15px;   
+            color: grey; 
         }
     }
 }
@@ -200,9 +200,9 @@ body {
     display: none;
     &:checked + label > i {
     font-weight: 900;
+    color: transparent;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    color: transparent;
     animation: remplissage 300ms;
 }
 }
@@ -210,9 +210,9 @@ body {
     display: none;
     &:checked + label > i {
     font-weight: 900;
+    color: transparent;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    color: transparent;
     animation: remplissage 300ms;
 }
 }
@@ -220,9 +220,9 @@ body {
     display: none;
     &:checked + label > i {
     font-weight: 900;
+    color: transparent;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    color: transparent;
     animation: remplissage 300ms;
 }
 }
@@ -230,18 +230,18 @@ body {
     display: none;
     &:checked + label > i {
     font-weight: 900;
+    color: transparent;
     background: linear-gradient(#f392d8,  #9356DC);
     background-clip: text;
-    color: transparent;
     animation: remplissage 300ms;
 }
 }
 .restaurant {
-    background-color:$color-quaternary;
     padding: $padding-page;
+    background-color:$color-quaternary;
     @include tablette{
-        padding-left: 100px;
-        padding-right :100px;
+        padding-left: 90px;
+        padding-right :90px;
     }
     &__paire {
         @include desktop {
@@ -250,10 +250,10 @@ body {
         }
     }
     &__carte {
-        @include bordure;
-        @include ombre ;
         height: 300px; 
         margin-bottom: 50px;
+        @include bordure;
+        @include ombre ;
         background-color: white;
         @include desktop {
             width:45%;
@@ -267,15 +267,15 @@ body {
                 object-fit: cover;
                 border-radius: 15px  15px 0 0;
                 &--nouveau {
-                    border: $color-teritiary 1px solid;
-                    border-radius: 2px;
                     position: absolute;
                     right: 5%;
                     bottom: 70%;
                     padding: 5px 15px;
                     font-weight: 500;
-                    background-color: $color-teritiary;
                     color: #2e806c;
+                    border: $color-teritiary 1px solid;
+                    border-radius: 2px;
+                    background-color: $color-teritiary;
                 }
             }
         }
@@ -292,7 +292,7 @@ body {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    }
+                }
                 &__quartier {
                     font-size:22px ;
                     font-weight: 300;
@@ -305,29 +305,27 @@ body {
                     padding: 14px 0px;
                 }
             }
-          
-
         }
     }
 }
 .footer {
     padding: $padding-page;
-    background-color: rgb(52, 52, 52);
     color: #FFFF;
+    background-color: rgb(52, 52, 52);
     @include tablette {
         display: flex;
         flex-direction: row-reverse;
     }
     &__logo {
-        filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
         width: 100px;
+        filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
         @include tablette {
             padding-bottom: 11px; // pour aligner le logo aux 4 élements
         }
     }
     &__list {
-        list-style: none;
         padding: 0;
+        list-style: none;
         @include tablette{
             display: flex; // pour que les 4 elements passent en ligne
             margin-right: 30px;  // pour espacer les 4 éléments du logo

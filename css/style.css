@@ -1,17 +1,17 @@
-@keyframes remplissage {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes barres {
   0% {
     transform: scaleY(0.5);
   }
   100% {
     transform: scaleY(1);
+  }
+}
+@keyframes remplissage {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
   }
 }
 * {
@@ -33,11 +33,11 @@ body a {
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
   visibility: hidden;
   opacity: 0;
   transition: visibility 3s, opacity 10s;
@@ -55,9 +55,9 @@ body a {
   justify-content: space-evenly;
 }
 .load__bar {
-  background-color: #9356DC;
   height: 100%;
   width: 3vh;
+  background-color: #9356DC;
   animation-name: barres;
   animation-duration: 900ms;
   animation-fill-mode: backwards;
@@ -69,9 +69,9 @@ body a {
   animation-delay: 180ms;
 }
 .load__bar--1-inv {
-  animation-delay: 440ms;
-  animation-direction: alternate-reverse;
   background-color: #99E2D0;
+  animation-delay: 830ms;
+  animation-direction: alternate-reverse;
 }
 .load__bar--1-inv:hover {
   animation-play-state: paused;
@@ -80,9 +80,9 @@ body a {
   animation-delay: 360ms;
 }
 .load__bar--2-inv {
-  animation-delay: 1495ms;
-  animation-direction: alternate-reverse;
   background-color: #99E2D0;
+  animation-delay: 1765ms;
+  animation-direction: alternate-reverse;
 }
 .load__bar--2-inv:hover {
   animation-play-state: paused;
@@ -91,9 +91,9 @@ body a {
   animation-delay: 540ms;
 }
 .load__bar--3-inv {
-  animation-delay: 1785ms;
-  animation-direction: alternate-reverse;
   background-color: #99E2D0;
+  animation-delay: 1650ms;
+  animation-direction: alternate-reverse;
 }
 .load__bar--3-inv:hover {
   animation-play-state: paused;
@@ -102,9 +102,9 @@ body a {
   animation-delay: 720ms;
 }
 .load__bar--4-inv {
-  animation-delay: 1910ms;
-  animation-direction: alternate-reverse;
   background-color: #99E2D0;
+  animation-delay: 1580ms;
+  animation-direction: alternate-reverse;
 }
 .load__bar--4-inv:hover {
   animation-play-state: paused;
@@ -113,9 +113,9 @@ body a {
   animation-delay: 900ms;
 }
 .load__bar--5-inv {
-  animation-delay: 1315ms;
-  animation-direction: alternate-reverse;
   background-color: #99E2D0;
+  animation-delay: 2125ms;
+  animation-direction: alternate-reverse;
 }
 .load__bar--5-inv:hover {
   animation-play-state: paused;
@@ -133,12 +133,12 @@ body a {
 
 .localisation {
   display: flex;
+  padding: 15px 0;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
-  padding: 15px 0;
-  background-color: rgb(231, 231, 231);
   font-weight: 500;
+  box-shadow: 0 2px 5px 0px rgba(3, 3, 7, 0.3) inset;
+  background-color: rgb(231, 231, 231);
 }
 .localisation__icone {
   margin: 0;
@@ -152,25 +152,25 @@ body a {
 
 .reservation {
   display: flex;
+  padding: 30px;
   flex-direction: column;
   align-items: center;
   background-color: rgb(247, 247, 247);
-  padding: 30px;
 }
 .reservation__titre {
   margin: 0;
-  font-weight: 750;
   text-align: center;
+  font-weight: 750;
 }
 .reservation__description {
   text-align: center;
 }
 .reservation__bouton {
+  padding: 13px 17px;
+  color: white;
   font-weight: 500;
   border-radius: 20px;
   box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
-  padding: 13px 17px;
-  color: white;
   background: linear-gradient(#f392d8, #9356DC);
 }
 .reservation__bouton:hover {
@@ -183,8 +183,8 @@ body a {
 }
 @media screen and (min-width: 768px) {
   .fonctionnement {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
 .fonctionnement ul {
@@ -197,38 +197,38 @@ body a {
     justify-content: space-between;
   }
 }
-.fonctionnement__etape:hover .fonctionnement__etape__icone {
-  color: #9356DC;
-}
 .fonctionnement__etape {
-  border-radius: 20px;
-  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
-  font-weight: 600;
   margin-bottom: 20px;
   padding: 25px 0;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   background-color: rgb(247, 247, 247);
   list-style: none;
+}
+.fonctionnement__etape:hover {
+  background-color: #f5eef7;
+}
+.fonctionnement__etape:hover .fonctionnement__etape__icone {
+  color: #9356DC;
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement__etape {
     width: 30%;
   }
 }
-.fonctionnement__etape:hover {
-  background-color: #f5eef7;
-}
 .fonctionnement__etape__chiffre {
-  border-radius: 20px;
   position: relative;
   right: 15px;
   padding: 5px 10px;
-  background-color: #9356DC;
   color: white;
   font-weight: 500;
+  border-radius: 20px;
+  background-color: #9356DC;
 }
 .fonctionnement__etape__icone {
-  color: grey;
   padding-right: 15px;
+  color: grey;
 }
 
 #bouton {
@@ -236,9 +236,9 @@ body a {
 }
 #bouton:checked + label > i {
   font-weight: 900;
+  color: transparent;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  color: transparent;
   animation: remplissage 300ms;
 }
 
@@ -247,9 +247,9 @@ body a {
 }
 #boutonn:checked + label > i {
   font-weight: 900;
+  color: transparent;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  color: transparent;
   animation: remplissage 300ms;
 }
 
@@ -258,9 +258,9 @@ body a {
 }
 #boutonnn:checked + label > i {
   font-weight: 900;
+  color: transparent;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  color: transparent;
   animation: remplissage 300ms;
 }
 
@@ -269,20 +269,20 @@ body a {
 }
 #boutonnnn:checked + label > i {
   font-weight: 900;
+  color: transparent;
   background: linear-gradient(#f392d8, #9356DC);
   background-clip: text;
-  color: transparent;
   animation: remplissage 300ms;
 }
 
 .restaurant {
-  background-color: rgb(247, 247, 247);
   padding: 30px;
+  background-color: rgb(247, 247, 247);
 }
 @media screen and (min-width: 768px) {
   .restaurant {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -292,10 +292,10 @@ body a {
   }
 }
 .restaurant__carte {
-  border-radius: 20px;
-  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   height: 300px;
   margin-bottom: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
   background-color: white;
 }
 @media screen and (min-width: 1024px) {
@@ -314,15 +314,15 @@ body a {
   border-radius: 15px 15px 0 0;
 }
 .restaurant__carte__container__image--nouveau {
-  border: #99E2D0 1px solid;
-  border-radius: 2px;
   position: absolute;
   right: 5%;
   bottom: 70%;
   padding: 5px 15px;
   font-weight: 500;
-  background-color: #99E2D0;
   color: #2e806c;
+  border: #99E2D0 1px solid;
+  border-radius: 2px;
+  background-color: #99E2D0;
 }
 .restaurant__carte__bas {
   display: flex;
@@ -354,8 +354,8 @@ body a {
 
 .footer {
   padding: 30px;
-  background-color: rgb(52, 52, 52);
   color: white;
+  background-color: rgb(52, 52, 52);
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -364,8 +364,8 @@ body a {
   }
 }
 .footer__logo {
-  filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
   width: 100px;
+  filter: invert(96%) sepia(4%) saturate(16%) hue-rotate(86deg) brightness(104%) contrast(104%);
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
@@ -373,8 +373,8 @@ body a {
   }
 }
 .footer__list {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 @media screen and (min-width: 768px) {
   .footer__list {

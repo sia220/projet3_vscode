@@ -86,7 +86,7 @@ body {
                 animation-delay: $i * 180ms;
             }
             &--#{$i}-inv {
-                background-color: $color-teritiary;
+                background-color: #f392d8;
                 animation-delay: $i * 200ms + random(100)*15ms;
                 animation-direction: alternate-reverse;
                 &:hover {
@@ -196,37 +196,7 @@ body {
         }
     }
 }
-#bouton {
-    display: none;
-    &:checked + label > i {
-    font-weight: 900;
-    color: transparent;
-    background: linear-gradient(#f392d8,  #9356DC);
-    background-clip: text;
-    animation: remplissage 300ms;
-}
-}
-#boutonn {
-    display: none;
-    &:checked + label > i {
-    font-weight: 900;
-    color: transparent;
-    background: linear-gradient(#f392d8,  #9356DC);
-    background-clip: text;
-    animation: remplissage 300ms;
-}
-}
-#boutonnn {
-    display: none;
-    &:checked + label > i {
-    font-weight: 900;
-    color: transparent;
-    background: linear-gradient(#f392d8,  #9356DC);
-    background-clip: text;
-    animation: remplissage 300ms;
-}
-}
-#boutonnnn {
+#bouton, #boutonn, #boutonnn, #boutonnnn {
     display: none;
     &:checked + label > i {
     font-weight: 900;
@@ -302,7 +272,7 @@ body {
                 margin-left: auto;
                 padding-left: 10px;
                 &__icone {
-                    padding: 14px 0px;
+                    padding: 14px 1px;
                 }
             }
         }

@@ -69,8 +69,8 @@ body a {
   animation-delay: 180ms;
 }
 .load__bar--1-inv {
-  background-color: #99E2D0;
-  animation-delay: 830ms;
+  background-color: #f392d8;
+  animation-delay: 980ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--1-inv:hover {
@@ -80,8 +80,8 @@ body a {
   animation-delay: 360ms;
 }
 .load__bar--2-inv {
-  background-color: #99E2D0;
-  animation-delay: 1765ms;
+  background-color: #f392d8;
+  animation-delay: 1900ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--2-inv:hover {
@@ -91,8 +91,8 @@ body a {
   animation-delay: 540ms;
 }
 .load__bar--3-inv {
-  background-color: #99E2D0;
-  animation-delay: 1650ms;
+  background-color: #f392d8;
+  animation-delay: 1710ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--3-inv:hover {
@@ -102,8 +102,8 @@ body a {
   animation-delay: 720ms;
 }
 .load__bar--4-inv {
-  background-color: #99E2D0;
-  animation-delay: 1580ms;
+  background-color: #f392d8;
+  animation-delay: 890ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--4-inv:hover {
@@ -113,8 +113,8 @@ body a {
   animation-delay: 900ms;
 }
 .load__bar--5-inv {
-  background-color: #99E2D0;
-  animation-delay: 2125ms;
+  background-color: #f392d8;
+  animation-delay: 1375ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--5-inv:hover {
@@ -231,43 +231,10 @@ body a {
   color: grey;
 }
 
-#bouton {
+#bouton, #boutonn, #boutonnn, #boutonnnn {
   display: none;
 }
-#bouton:checked + label > i {
-  font-weight: 900;
-  color: transparent;
-  background: linear-gradient(#f392d8, #9356DC);
-  background-clip: text;
-  animation: remplissage 300ms;
-}
-
-#boutonn {
-  display: none;
-}
-#boutonn:checked + label > i {
-  font-weight: 900;
-  color: transparent;
-  background: linear-gradient(#f392d8, #9356DC);
-  background-clip: text;
-  animation: remplissage 300ms;
-}
-
-#boutonnn {
-  display: none;
-}
-#boutonnn:checked + label > i {
-  font-weight: 900;
-  color: transparent;
-  background: linear-gradient(#f392d8, #9356DC);
-  background-clip: text;
-  animation: remplissage 300ms;
-}
-
-#boutonnnn {
-  display: none;
-}
-#boutonnnn:checked + label > i {
+#bouton:checked + label > i, #boutonn:checked + label > i, #boutonnn:checked + label > i, #boutonnnn:checked + label > i {
   font-weight: 900;
   color: transparent;
   background: linear-gradient(#f392d8, #9356DC);
@@ -349,7 +316,7 @@ body a {
   padding-left: 10px;
 }
 .restaurant__carte__bas__label__icone {
-  padding: 14px 0px;
+  padding: 14px 1px;
 }
 
 .footer {

@@ -184,11 +184,9 @@ body a {
   color: white;
   font-weight: 600;
 }
-.carte__section__ligne:hover .carte__section__ligne__sans_volet__bas__prix {
-  transition-duration: 500ms;
-}
 .carte__section__ligne:hover .carte__section__ligne__avec_volet {
   width: 70px;
+  transition: width 550ms;
   animation: volet both 500ms;
 }
 .carte__section__ligne:hover .carte__section__ligne__avec_volet i {

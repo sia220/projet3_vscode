@@ -190,11 +190,9 @@ body {
                     font-weight: 600;           
                 }
             }   
-            &:hover  .carte__section__ligne__sans_volet__bas__prix {
-                transition-duration: 500ms;
-            }
             &:hover .carte__section__ligne__avec_volet {
                 width: 70px;
+                transition: width 550ms;
                 animation: volet both 500ms;
             }
             &:hover .carte__section__ligne__avec_volet i {

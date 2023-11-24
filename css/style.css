@@ -28,6 +28,15 @@ body a {
   color: inherit;
 }
 
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
 .container {
   position: fixed;
   z-index: 999;
@@ -38,13 +47,11 @@ body a {
   align-items: center;
   justify-content: center;
   background-color: white;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 3s, opacity 10s;
+  animation: loader 3s forwards;
 }
 .container span {
   margin-bottom: 50px;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 21px;
 }
 
@@ -57,7 +64,7 @@ body a {
 .load__bar {
   height: 100%;
   width: 3vh;
-  background-color: #9356DC;
+  background-color: #FF79DA;
   animation-name: barres;
   animation-duration: 900ms;
   animation-fill-mode: backwards;
@@ -69,8 +76,8 @@ body a {
   animation-delay: 180ms;
 }
 .load__bar--1-inv {
-  background-color: #f392d8;
-  animation-delay: 980ms;
+  background-color: #9356DC;
+  animation-delay: 1115ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--1-inv:hover {
@@ -80,8 +87,8 @@ body a {
   animation-delay: 360ms;
 }
 .load__bar--2-inv {
-  background-color: #f392d8;
-  animation-delay: 1900ms;
+  background-color: #9356DC;
+  animation-delay: 1090ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--2-inv:hover {
@@ -91,8 +98,8 @@ body a {
   animation-delay: 540ms;
 }
 .load__bar--3-inv {
-  background-color: #f392d8;
-  animation-delay: 1710ms;
+  background-color: #9356DC;
+  animation-delay: 630ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--3-inv:hover {
@@ -102,8 +109,8 @@ body a {
   animation-delay: 720ms;
 }
 .load__bar--4-inv {
-  background-color: #f392d8;
-  animation-delay: 890ms;
+  background-color: #9356DC;
+  animation-delay: 1445ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--4-inv:hover {
@@ -113,8 +120,8 @@ body a {
   animation-delay: 900ms;
 }
 .load__bar--5-inv {
-  background-color: #f392d8;
-  animation-delay: 1375ms;
+  background-color: #9356DC;
+  animation-delay: 2185ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--5-inv:hover {
@@ -171,10 +178,10 @@ body a {
   font-weight: 500;
   border-radius: 20px;
   box-shadow: 0px 6px 7px 0px rgba(102, 102, 110, 0.3);
-  background: linear-gradient(#f392d8, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 .reservation__bouton:hover {
-  background: linear-gradient(#ff6acd, #9356DC);
+  background: linear-gradient(#ff88dd, #9c66df);
   box-shadow: 0px 9px 7px 0px rgba(102, 102, 110, 0.3);
 }
 
@@ -317,6 +324,36 @@ body a {
 }
 .restaurant__carte__bas__label__icone {
   padding: 14px 1px;
+  margin-left: auto;
+}
+.restaurant__carte__bas__label__icone:hover {
+  font-weight: 900;
+  color: transparent;
+  background: linear-gradient(#f392d8, #9356DC);
+  background-clip: text;
+  animation: remplissage 500ms;
+}
+
+.jauge {
+  width: 100px;
+  height: 200px;
+  display: block;
+  background-color: #303030;
+  position: relative;
+}
+
+.jauge-remplissage {
+  transition: all 0.3s linear 0s;
+  background-color: #33BEE5;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.jauge:hover .jauge-remplissage {
+  height: 100%;
 }
 
 .footer {

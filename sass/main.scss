@@ -17,14 +17,6 @@ $padding-page : 30px;
 @mixin bordure {
     border-radius: 20px;
 }
-@keyframes remplissage {
-    0% {
-        opacity: .2;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 @mixin tablette {
     @media screen and (min-width: 768px) {
         @content;
@@ -209,6 +201,15 @@ body {
     }
 }
 // Partie cartes de restaurants
+#bouton, #boutonn, #boutonnn, #boutonnnn {
+    display: none;
+    &:checked + label > i {
+    font-weight: 900;
+    color: transparent;
+    background: linear-gradient(#f392d8,  #9356DC);
+    background-clip: text;
+}
+}
 .restaurant {
     padding: $padding-page;
     background-color:$color-quaternary;
@@ -271,16 +272,12 @@ body {
                     font-weight: 300;
                 }
             }
-            &__icone {
-                padding: 14px 1px;    
-                margin-left: auto; 
-                &:hover {
-                    font-weight: 900;
-                    color: transparent;
-                    background: linear-gradient(#f392d8,  #9356DC);
-                    background-clip: text;
-                    animation: remplissage 300ms; 
-                    }
+            &__label {
+                margin-left: auto;
+                padding-left: 10px;
+                &__icone {
+                    padding: 14px 1px;      
+                }
             }
         }
     }

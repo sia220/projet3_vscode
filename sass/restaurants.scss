@@ -85,16 +85,6 @@ body {
     object-fit: cover;
 }
 // Section carte 
-#bouton {
-    display: none;
-    &:checked + label > i {
-    font-weight: 900;
-    color: transparent;
-    background: linear-gradient(#f392d8,  #9356DC);
-    background-clip: text;
-    animation: remplissage 300ms;
-}
-}
 .carte {
     position: relative;
     bottom: 65px;
@@ -122,6 +112,13 @@ body {
         &__icone {
             padding: 14px 0; //pour que la taille de l'icone soit égale à sa taille réelle. Ainsi, l'animation ne s'activera que sur le coeur et pas autour
             margin-left: 20px; // pour espacer le coeur du titre
+            &:hover {
+                font-weight: 900;
+                color: transparent;
+                background: linear-gradient(#f392d8,  #9356DC);
+                background-clip: text;
+                animation: remplissage 300ms;
+            }
         }
         @include desktop {
             justify-content: center;

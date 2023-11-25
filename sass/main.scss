@@ -61,19 +61,20 @@ body {
     background-color: white; // couleur d'arrière-plan du loader
     animation : loader 3s forwards;
     & span {
-        margin-bottom: 50px;
-        font-weight: 600;
-        font-size: 21px;
+        margin: 20px;
+        font-weight: 500;
+        font-size: 2vh;
+        text-align: center;
     }
  }
  .load {
     display: flex;
-    width: 50%;
-    height: 30vh;
+    width: 130px;
+    height: 75px;
     justify-content: space-evenly;
     &__bar {
-        height: 100%;
-        width:3vh;
+        height: 60px;
+        width: 13px;
         background-color: $color-secondary;
         animation-name: barres;
         animation-duration: 900ms;
@@ -83,11 +84,11 @@ body {
         animation-timing-function: ease-in-out;
         @for $i from 1 through 5 {
             &--#{$i} {
-                animation-delay: $i * 180ms;
+                animation-delay: $i * 100ms;
             }
             &--#{$i}-inv {
                 background-color: $color-primary;
-                animation-delay: $i * 200ms + random(100)*15ms;
+                animation-delay: $i * 150ms + random(100)*15ms;
                 animation-direction: alternate-reverse;
                 &:hover {
                     animation-play-state: paused;

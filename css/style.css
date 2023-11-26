@@ -70,7 +70,7 @@ body a {
 }
 .load__bar--1-inv {
   background-color: #9356DC;
-  animation-delay: 615ms;
+  animation-delay: 1365ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--1-inv:hover {
@@ -81,7 +81,7 @@ body a {
 }
 .load__bar--2-inv {
   background-color: #9356DC;
-  animation-delay: 1665ms;
+  animation-delay: 1200ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--2-inv:hover {
@@ -92,7 +92,7 @@ body a {
 }
 .load__bar--3-inv {
   background-color: #9356DC;
-  animation-delay: 1800ms;
+  animation-delay: 1380ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--3-inv:hover {
@@ -103,7 +103,7 @@ body a {
 }
 .load__bar--4-inv {
   background-color: #9356DC;
-  animation-delay: 945ms;
+  animation-delay: 1695ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--4-inv:hover {
@@ -114,7 +114,7 @@ body a {
 }
 .load__bar--5-inv {
   background-color: #9356DC;
-  animation-delay: 1860ms;
+  animation-delay: 1170ms;
   animation-direction: alternate-reverse;
 }
 .load__bar--5-inv:hover {
@@ -188,7 +188,7 @@ body a {
   }
 }
 .fonctionnement__titre {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.67em 0px;
 }
 .fonctionnement ul {
@@ -256,7 +256,7 @@ body a {
   }
 }
 .restaurant__titre {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.67em 0px;
 }
 @media screen and (min-width: 1024px) {
